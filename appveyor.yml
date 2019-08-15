@@ -9,6 +9,10 @@ stack: go 1.12
 
 before_test:
   - go vet ./...
+  - go get -u github.com/jstemmer/go-junit-report
 
 test_script:
-  - go test ./...
+  - go test ./... | go-junit-report > tests_report.xml
+
+on_finish:
+- ps: '"(new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests_report.xml))"'
