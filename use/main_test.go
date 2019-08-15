@@ -3,8 +3,8 @@ package main
 import (
 	"testing"
 
-	"example.com/me/lib"
-	tu "example.com/me/testutils"
+	"github.com/LaurenceCheng/testutils/lib"
+	tu "github.com/LaurenceCheng/testutils/testutils"
 )
 
 func TestMethodP0(t *testing.T) {

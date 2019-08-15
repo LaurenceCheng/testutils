@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/me/lib"
+	"github.com/LaurenceCheng/testutils/lib"
 )
 
 func main() {
