@@ -17,4 +17,5 @@ test_script:
   - go test ./... | c:\gopath\bin\go-junit-report > tests_report.xml
 
 on_finish:
+- ps: type (Resolve-Path .\tests_report.xml)
 - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests_report.xml))
