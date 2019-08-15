@@ -7,14 +7,14 @@ environment:
 
 stack: go 1.12
 
+install:
+  - go get -u github.com/jstemmer/go-junit-report
+
 before_test:
   - go vet ./...
 
 test_script:
-- cmd: >-
-    go get -u github.com/jstemmer/go-junit-report
-
-    go test ./... | go-junit-report > tests_report.xml
+  - go test ./... | go-junit-report > tests_report.xml
 
 on_finish:
 - ps: '"(new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests_report.xml))"'
