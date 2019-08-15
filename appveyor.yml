@@ -14,7 +14,7 @@ before_test:
   - go vet ./...
 
 test_script:
-  - go test ./... | c:\gopath\bin\go-junit-report > tests_report.xml
+  - go test -v ./... 2>&1 | c:\gopath\bin\go-junit-report > tests_report.xml
 
 on_finish:
 - ps: type (Resolve-Path .\tests_report.xml)
