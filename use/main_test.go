@@ -48,7 +48,7 @@ func TestMethodP2(t *testing.T) {
 			TargetType: tu.GetType(lib.MyStruct{}),
 			TestMethod: "MethodP2",
 			Args:       tu.GetArgs(3, 4),
-			Want:       tu.GetWant(12),
+			Want:       tu.GetWant(15),
 		},
 	}
 
@@ -62,7 +62,7 @@ func TestMethodP2R2(t *testing.T) {
 			TargetType: tu.GetType(lib.MyStruct{}),
 			TestMethod: "MethodP2R2",
 			Args:       tu.GetArgs(3, 4),
-			Want:       tu.GetWant(12, "12"),
+			Want:       tu.GetWant(12, 12),
 		},
 	}
 
