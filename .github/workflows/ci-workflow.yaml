@@ -1,0 +1,11 @@
+name: Test for Github Actions
+on: create
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+      run: echo 'first steppppppppp'
+  my_second_job:
+    name: My second job
