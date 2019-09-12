@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: First step
-      run: echo 'first steppppppppp'
+        run: echo 'first steppppppppp'
   my_second_job:
     name: My second job
