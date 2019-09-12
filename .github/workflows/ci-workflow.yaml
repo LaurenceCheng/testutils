@@ -1,5 +1,5 @@
 name: Test for Github Actions
-on: create
+on: [create, push]
 jobs:
   my_first_job:
     name: My first job
