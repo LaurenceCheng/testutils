@@ -1,5 +1,9 @@
 name: Test for Github Actions
-on: [create, push]
+on:
+  push:
+    branches:
+      - master
+      - test-github-actions
 jobs:
   my_first_job:
     name: My first job
