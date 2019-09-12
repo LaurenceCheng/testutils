@@ -9,3 +9,7 @@ jobs:
         run: echo 'first steppppppppp'
   my_second_job:
     name: My second job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second step
+        run: echo 'seccccccond stepppppppap'
